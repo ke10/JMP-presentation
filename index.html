@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+	<style>
+		#slide {
+			font-size: .85em;
+		}
+		li:not(:last-child) {
+		    margin-bottom: 1em;
+		}
+		#parent {
+	    display: flex;
+		}
+		#child {
+    	margin: auto auto;
+		}
+	</style>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Agreement rules and communication in policy bargaining</title>
+
+		<link rel="stylesheet" href="reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="reveal.js/dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<p class="r-fit-text"> Agreement Rules and Communication <br> in Policy Bargaining </p>
+					<p> Kirill S. Evdokimov <br> Rice University </p>
+					<p id="parent">
+						<p id="child" style="font-size: .7em;">
+							October 8, 2021 <br>
+							Midwest Theory Meeting
+						</p>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h3>Motivation</h3>
+						<div class="r-stretch">
+							<p>
+								test
+							</p>
+						</div>
+					</section>
+					<section>
+						<h3>Related literature</h3>
+						<div class="r-stretch">
+							<p>
+								test
+							</p>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<h3>Environment</h3>
+					<div id="slide">
+						<ul>
+							<li>
+								Two voters, $L$ and $R$, and the agenda-setter $A$
+							</li>
+							<li>
+								The policy space is $\mathbb R_+$, the status-quo policy is $0$
+							</li>
+							<li>
+								The agenda-setter's period utility from policy $x$ is $u_A(x)=x$
+							</li>
+							<li>
+								The utilities of voters depend on state $\omega\in\{\ell,h\}$
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					 <h3>Quadratic utilities</h3>
+					 <div id="slide">
+						 <p>
+							 Period utility of voter $i$ from policy $x$ in state $\omega$ is \[u_i(x;\omega)=-\textstyle\left(\frac12 y_i^{\omega}-x\right)^2\]
+						 </p>
+					 </div>
+				</section>
+
+
+				<section>
+					 Majority
+				</section>
+
+				<section>
+					 Unanimity
+				</section>
+
+				<section>
+					 Comparison
+				</section>
+
+				<section>
+					<section>
+						 Conclusion
+					</section>
+					<section>
+						 Communication
+					</section>
+				</section>
+
+
+				<section>
+					Slide 2
+					<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+					<script type="text/x-mathjax-config">
+					  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+					</script>
+					<script type="text/javascript"
+					  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+					</script>
+					<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+					<script type="text/javascript" src="coalition-check.js"></script>
+					<script type="text/javascript" src="area.js"></script>
+					<script type="text/javascript" src="dominates.js"></script>
+					<script type="text/javascript" src="coase.js"></script>
+					<script>
+						window.onload=function(){
+					    myCoalition();
+					    mplus();
+						}
+					</script>
+
+					<div id="coalition" style="margin: 0 auto; max-width: 800px; font-size: 16px"></div>
+
+					<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 800px">
+							<div style="font-size: 16px">
+								<label for="slider7">$\text{Value of }y^\ell:$</label>
+								<input oninput="myCoalition()" type="range" min="1" max="9" value="4" step=".5" id="slider7">
+							</div>
+							<div style="font-size: 16px">
+								<label for="slider8">$\text{Value of }b:$</label>
+								<input oninput="myCoalition()" type="range" min="0" max="10" value="3" step=".5" id="slider8" style="color: #fff">
+							</div>
+							<div style="font-size: 16px">
+								<label for="Check1">$\text{Allow communication:}$</label>
+								<input onchange="myCoalition()" type="checkbox" value="1" id="check1">
+							</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
