@@ -1,5 +1,15 @@
 <html>
 	<meta name="robots" content="noindex">
+
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
 	<style>
 		#slide {
 			font-size: .85em;
@@ -14,6 +24,7 @@
     	margin: auto auto;
 		}
 	</style>
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -27,6 +38,7 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css">
 	</head>
+
 	<body>
 		<div class="reveal">
 			<div class="slides">
@@ -45,20 +57,74 @@
 				<section>
 					<section>
 						<h3>Motivation</h3>
-						<div class="r-stretch">
+						<div id="slide">
 							<p>
-								test
+								Agenda-setter makes a policy proposal that must be approved by voters.
 							</p>
+							<p>
+								The proposal can be revised when it gets rejected.
+							</p>
+
+							<span class="fragment fade-in">
+								<ul style="margin-top: 1em">
+									<li>
+										The president nominates federal judges, approved by senators
+									</li>
+									<li>
+										Chairs make motions that, approved by committee members
+									</li>
+									<li>
+										Municipal authorities propose spending measures, approved by eligible voters
+									</li>
+								</ul>
+							</span>
 						</div>
 					</section>
+
 					<section>
 						<h3>Related literature</h3>
-						<div class="r-stretch">
-							<p>
-								test
-							</p>
+						<div style="font-size: .7em">
+							<ul>
+								<li> Repeated referenda <br>
+									<span style="color: blue">
+										<b>Romer and Rosenthal (1979)</b>, Morton (1988), Rosenthal and Zame (2019), Chen (2020a,b)
+									</span>
+								</li>
+								<li> Bilateral bargaining with asymmetric information <br>
+									<span style="color: blue">
+										<b> Fudenberg, Levine, and Tirole (1985)</b>, Gul, Sonnenschein, and Wilson (1986), Deneckere and Liang (2006), Fuchs and Skrzypacz (2013), Ortner (2017), Daley and Green (2020)
+									</span>
+								</li>
+								<li> Voting on endogeneous agenda <br>
+									<span style="color: blue">
+										Bond and Eraslan (2010)
+									</span>
+								</li>
+								<li> Signaling in voting <br>
+									<span style="color: blue">
+										Piketty (2000), Razin (2003), Meirowitz (2005), Meirowitz and Shotts (2009), McMurray (2017)
+									</span>
+								</li>
+							</ul>
 						</div>
 					</section>
+				</section>
+
+				<section>
+					 <h3> Key features </h3>
+					 <div id="slide">
+						 <p> Voters are privately informed about their ideal policies. </p>
+						 <p> Voters have conflicting preferences. </p>
+					 </div>
+				</section>
+
+				<section>
+					 <h3> Questions </h3>
+					 <div id="slide">
+						 <p> Does the agenda-setter value the ability to revise proposals? </p>
+						 <p class="fragment fade-in"> How the adopted policies depend on the preferences of voters? </p>
+						 <p class="fragment fade-in"> What is the role of voting rule? </p>
+					 </div>
 				</section>
 
 				<section>
@@ -92,37 +158,65 @@
 
 
 				<section>
-					 Majority
+					 <h3>Assumptions</h3>
+					 <div id="slide">
+						 <p>
+							 Denote the ideal policies of voter $L$ using $y^\ell>0$ and $y^h>0$.
+						 </p>
+						 <p class="fragment fade-in">
+							 Assume that the ideal policies of voter $R$ are $y^\ell+b$ and $y^h+b$ for $b\geq0$.
+						 </p>
+						 <p class="fragment fade-in">
+							 Assume $y^\ell &lt; y^h$.
+						 </p>
+					 </div>
 				</section>
 
-				<section>
-					 Unanimity
-				</section>
 
 				<section>
-					 Comparison
-				</section>
+					 <h3>Timing</h3>
+					 <div id="slide">
+					 </div>
+				 </section>
+
+
+				 <section>
+ 					 <h3>Majority</h3>
+ 					 <div id="slide">
+					 </div>
+ 				 </section>
+
+
+				 <section>
+ 					 <h3>Unanimity</h3>
+ 					 <div id="slide">
+					 </div>
+ 				 </section>
+
+				 <section>
+ 					 <h3>Comparison</h3>
+ 					 <div id="slide">
+					 </div>
+ 				 </section>
 
 				<section>
 					<section>
-						 Conclusion
-					</section>
-					<section>
-						 Communication
-					</section>
+  					 <h3>Conclusion</h3>
+  					 <div id="slide">
+ 					 </div>
+  				 </section>
+					 <section>
+	 					 <h3>Communication</h3>
+	 					 <div id="slide">
+						 </div>
+	 				 </section>
 				</section>
 
+
+<!--
 
 				<section>
 					Slide 2
-					<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-					<script type="text/x-mathjax-config">
-					  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-					</script>
-					<script type="text/javascript"
-					  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-					</script>
-					<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 					<script type="text/javascript" src="coalition-check.js"></script>
 					<script type="text/javascript" src="area.js"></script>
 					<script type="text/javascript" src="dominates.js"></script>
@@ -151,6 +245,8 @@
 							</div>
 					</div>
 				</section>
+-->
+
 			</div>
 		</div>
 
