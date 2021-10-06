@@ -9,6 +9,13 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 	</script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+	<script type="text/javascript" src="utility.js"></script>
+	<script>
+		window.onload=function(){
+			myUtility();
+		}
+	</script>
+
 
 	<style>
 		#slide {
@@ -71,7 +78,7 @@
 										The president nominates federal judges, approved by senators
 									</li>
 									<li>
-										Chairs make motions that, approved by committee members
+										Chairs make motions, approved by committee members
 									</li>
 									<li>
 										Municipal authorities propose spending measures, approved by eligible voters
@@ -121,7 +128,7 @@
 				<section>
 					 <h3> Questions </h3>
 					 <div id="slide">
-						 <p> Does the agenda-setter value the ability to revise proposals? </p>
+						 <p class="fragment fade-in"> Does the agenda-setter value the ability to revise proposals? </p>
 						 <p class="fragment fade-in"> How the adopted policies depend on the preferences of voters? </p>
 						 <p class="fragment fade-in"> What is the role of voting rule? </p>
 					 </div>
@@ -153,6 +160,15 @@
 						 <p>
 							 Period utility of voter $i$ from policy $x$ in state $\omega$ is \[u_i(x;\omega)=-\textstyle\left(\frac12 y_i^{\omega}-x\right)^2\]
 						 </p>
+						 <p>
+			 				<div id="utility" style="margin: 0 auto; max-height: 300px; max-width: 600px; font-size: .7em"></div>
+			 				<div style="display: grid; grid-template-columns: 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 600px">
+		 						<div style="font-size: .7em">
+		 							<label for="slider">Value of $y^\omega_i$</label>
+		 							<input oninput="myUtility()" type="range" min="0" max="10" value="5" step=".5" id="slider" style="color: #fff">
+		 						</div>
+			 				</div>
+						 </p>
 					 </div>
 				</section>
 
@@ -160,7 +176,7 @@
 				<section>
 					 <h3>Assumptions</h3>
 					 <div id="slide">
-						 <p>
+						 <p class="fragment fade-in">
 							 Denote the ideal policies of voter $L$ using $y^\ell>0$ and $y^h>0$.
 						 </p>
 						 <p class="fragment fade-in">
