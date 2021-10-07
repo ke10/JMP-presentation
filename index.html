@@ -10,9 +10,11 @@
 	</script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 	<script type="text/javascript" src="utility.js"></script>
+	<script type="text/javascript" src="second.js"></script>
 	<script>
 		window.onload=function(){
 			myUtility();
+			mySecond();
 		}
 	</script>
 
@@ -30,6 +32,10 @@
 		#child {
     	margin: auto auto;
 		}
+		#cell {
+			border-bottom: 0;
+		}
+
 	</style>
 
 	<head>
@@ -61,16 +67,19 @@
 					</p>
 				</section>
 
+
 				<section>
 					<section>
 						<h3>Motivation</h3>
 						<div id="slide">
-							<p>
-								Agenda-setter makes a policy proposal that must be approved by voters.
-							</p>
-							<p>
-								The proposal can be revised when it gets rejected.
-							</p>
+							<span class="fragment fade-in">
+								<p>
+									Agenda-setter makes a policy proposal that must be approved by voters.
+								</p>
+								<p>
+									The proposal can be revised when it gets rejected.
+								</p>
+							</span>
 
 							<span class="fragment fade-in">
 								<ul style="margin-top: 1em">
@@ -120,7 +129,7 @@
 				<section>
 					 <h3> Key features </h3>
 					 <div id="slide">
-						 <p> Voters are privately informed about their ideal policies. </p>
+						 <p style="margin-bottom: 1em"> Voters are privately informed about their ideal policies. </p>
 						 <p> Voters have conflicting preferences. </p>
 					 </div>
 				</section>
@@ -128,8 +137,8 @@
 				<section>
 					 <h3> Questions </h3>
 					 <div id="slide">
-						 <p class="fragment fade-in"> Does the agenda-setter value the ability to revise proposals? </p>
-						 <p class="fragment fade-in"> How the adopted policies depend on the preferences of voters? </p>
+						 <p class="fragment fade-in" style="margin-bottom: 1em"> Does the agenda-setter value the ability to revise proposals? </p>
+						 <p class="fragment fade-in" style="margin-bottom: 1em"> How the adopted policies depend on the preferences of voters? </p>
 						 <p class="fragment fade-in"> What is the role of voting rule? </p>
 					 </div>
 				</section>
@@ -176,10 +185,10 @@
 				<section>
 					 <h3>Assumptions</h3>
 					 <div id="slide">
-						 <p class="fragment fade-in">
+						 <p class="fragment fade-in" style="margin-bottom: 1em">
 							 Denote the ideal policies of voter $L$ using $y^\ell>0$ and $y^h>0$.
 						 </p>
-						 <p class="fragment fade-in">
+						 <p class="fragment fade-in" style="margin-bottom: 1em">
 							 Assume that the ideal policies of voter $R$ are $y^\ell+b$ and $y^h+b$ for $b\geq0$.
 						 </p>
 						 <p class="fragment fade-in">
@@ -190,11 +199,127 @@
 
 
 				<section>
-					 <h3>Timing</h3>
+					 <h3>Information</h3>
 					 <div id="slide">
+						 <p> The agenda-setter is <b>uninformed</b> </p>
+						 <p> Voters <b>privately</b> observe the state $\omega\in\{\ell,h\}$ </p>
 					 </div>
 				 </section>
 
+
+				 <section data-auto-animate>
+ 					 <h3>Timing</h3>
+ 					 <div id="slide">
+					 	<ul>
+						</ul>
+						</p>
+				 </div>
+ 				 </section>
+				 <section data-auto-animate>
+ 					 <h3>Timing</h3>
+ 					 <div id="slide">
+					 	<ul>
+							<li>
+								two periods
+							</li>
+						</ul>
+						</p>
+				 </div>
+ 				 </section>
+				 <section data-auto-animate>
+ 					 <h3>Timing</h3>
+ 					 <div id="slide">
+					 	<ul>
+							<li>
+								two periods
+							</li>
+							<li>
+								the agenda-setter makes proposal $p_1\in\mathbb R_+$
+							</li>
+						</ul>
+						</p>
+				 </div>
+ 				 </section>
+				 <section data-auto-animate>
+ 					 <h3>Timing</h3>
+ 					 <div id="slide">
+					 	<ul>
+							<li>
+								two periods
+							</li>
+							<li>
+								the agenda-setter makes proposal $p_1\in\mathbb R_+$
+							</li>
+							<li>
+								if $q\in\{1,2\}$ voters accept $p_1$, policy $p_1$ is implemented in both periods
+							</li>
+						</ul>
+						</p>
+				 </div>
+ 				 </section>
+				 <section data-auto-animate>
+ 					 <h3>Timing</h3>
+ 					 <div id="slide">
+					 	<ul>
+							<li>
+								two periods
+							</li>
+							<li>
+								the agenda-setter makes proposal $p_1\in\mathbb R_+$
+							</li>
+							<li>
+								if $q\in\{1,2\}$ voters accept $p_1$, policy $p_1$ is implemented in both periods
+							</li>
+							<li>
+								otherwise, status-quo policy $0$ is implemented in period 1 and the agenda-setter makes proposal $p_2\in\mathbb R_+$
+							</li>
+						</ul>
+						</p>
+				 </div>
+ 				 </section>
+				 <section data-auto-animate>
+ 					 <h3>Timing</h3>
+ 					 <div id="slide">
+					 	<ul>
+							<li>
+								two periods
+							</li>
+							<li>
+								the agenda-setter makes proposal $p_1\in\mathbb R_+$
+							</li>
+							<li>
+								if $q\in\{1,2\}$ voters accept $p_1$, policy $p_1$ is implemented in both periods
+							</li>
+							<li>
+								otherwise, status-quo policy $0$ is implemented in period 1 and the agenda-setter makes proposal $p_2\in\mathbb R_+$
+							</li>
+							<li>
+								if $q$ voters accept $p_2$, policy $p_2$ is implemented in period 2
+							</li>
+						</ul>
+						</p>
+				 </div>
+ 				 </section>
+
+
+				 <section>
+ 					 <h3>Second period</h3>
+ 					 <div id="slide">
+						 <p>
+							<div id="second" style="margin: 0 auto; max-height: 300px; max-width: 600px; font-size: .7em"></div>
+							<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 600px">
+								<div style="font-size: .7em">
+									<label for="slider2">Value of $y^\ell$</label>
+									<input oninput="mySecond()" type="range" min="0" max="5" value="2" step=".5" id="slider2" style="color: #fff">
+								</div>
+								<div style="font-size: .7em">
+									<label for="slider3">Value of $b$</label>
+									<input oninput="mySecond()" type="range" min="0" max="8" value="4" step=".5" id="slider3" style="color: #fff">
+								</div>
+							</div>
+						 </p>
+					 </div>
+ 				 </section>
 
 				 <section>
  					 <h3>Majority</h3>
