@@ -11,10 +11,15 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 	<script type="text/javascript" src="utility.js"></script>
 	<script type="text/javascript" src="second.js"></script>
+	<script type="text/javascript" src="majority.js"></script>
+	<script type="text/javascript" src="comparison.js"></script>
 	<script>
 		window.onload=function(){
 			myUtility();
 			mySecond();
+			myMajority();
+			mplus();
+			myComparison();
 		}
 	</script>
 
@@ -34,6 +39,13 @@
 		}
 		#cell {
 			border-bottom: 0;
+		}
+		#theorem {
+			border: 2px solid black;
+			border-radius: 10px;
+			padding: 10px;
+			margin-top: 1em;
+			text-align: left;
 		}
 
 	</style>
@@ -170,7 +182,7 @@
 							 Period utility of voter $i$ from policy $x$ in state $\omega$ is \[u_i(x;\omega)=-\textstyle\left(\frac12 y_i^{\omega}-x\right)^2\]
 						 </p>
 						 <p>
-			 				<div id="utility" style="margin: 0 auto; max-height: 300px; max-width: 600px; font-size: .7em"></div>
+			 				<div id="utility" style="margin: 0 auto; max-height: 400px; max-width: 600px; font-size: .7em"></div>
 			 				<div style="display: grid; grid-template-columns: 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 600px">
 		 						<div style="font-size: .7em">
 		 							<label for="slider">Value of $y^\omega_i$</label>
@@ -306,7 +318,7 @@
  					 <h3>Second period</h3>
  					 <div id="slide">
 						 <p>
-							<div id="second" style="margin: 0 auto; max-height: 300px; max-width: 600px; font-size: .7em"></div>
+							<div id="second" style="margin: 0 auto; max-height: 400px; max-width: 600px; font-size: .7em"></div>
 							<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 600px">
 								<div style="font-size: .7em">
 									<label for="slider2">Value of $y^\ell$</label>
@@ -321,38 +333,124 @@
 					 </div>
  				 </section>
 
+
 				 <section>
  					 <h3>Majority</h3>
  					 <div id="slide">
+						 *describe cases*
 					 </div>
  				 </section>
 
 
 				 <section>
+ 					 <h3>Majority</h3>
+ 					 <div id="slide">
+						 <p>
+							<div id="majority" style="margin: 0 auto; max-height: 400px; max-width: 600px; font-size: .7em"></div>
+							<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 600px">
+								<div style="font-size: .7em">
+									<label for="majority-slider-1">Value of $y^\ell$</label>
+									<input oninput="myMajority()" type="range" min="0" max="5" value="2" step=".5" id="majority-slider-1" style="color: #fff">
+								</div>
+								<div style="font-size: .7em">
+									<label for="majority-slider-2">Value of $b$</label>
+									<input oninput="myMajority()" type="range" min="0" max="10" value="4" step=".5" id="majority-slider-2" style="color: #fff">
+								</div>
+								<div style="font-size: .7em">
+									<label for="majority-slider-3">Value of $\delta$</label>
+									<input oninput="myMajority()" type="range" min="0" max="1" value=".5" step=".05" id="majority-slider-3" style="color: #fff">
+								</div>
+							</div>
+						 </p>
+					 </div>
+ 				 </section>
+
+
+
+				 <section>
  					 <h3>Unanimity</h3>
  					 <div id="slide">
+						 <p class="fragment fade-in"> Revised proposal depends on who voted for the initial proposal. </p>
+						 <p class="fragment fade-in"> Can use off-path beliefs to punish deviations. </p>
+						 <p class="fragment fade-in"> Multiplicty of equilibrium paths. </p>
+						 <div class="fragment fade-in" id="theorem"> <b>Theorem 2.</b> There exist $\underline{v}$ and $\overline{v}$ such that under the unanimity rule, the agenda-setter's equilibrium ex ante expected payoff equals $v$ if and only if $v\in[\underline{v},\overline{v}]$. </div>
+					 </div>
+ 				 </section>
+
+
+				 <section>
+ 					 <h3>Comparison</h3>
+ 					 <div id="slide">
+						 <p class="fragment fade-in"> Trade-off between the ability to use punishments and having to reach out to voter $L$. </p>
+						 <div class="fragment fade-in" id="theorem"> <b>"Theorem 3."</b> Either force can dominate, depending on the prior belief $\hat\mu$, bias $b$, and the ideal points $y^\ell$ and $y^h$. </div>
 					 </div>
  				 </section>
 
 				 <section>
  					 <h3>Comparison</h3>
  					 <div id="slide">
+						 <div id="comparison" style="margin: 0 auto; max-height: 400px; max-width: 600px; font-size: .7em"></div>
+						 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 600px">
+							 <div style="font-size: .7em">
+								 <label for="comparison-slider-1">Value of $y^\ell$</label>
+								 <input oninput="myComparison()" type="range" min="1" max="9" value="4" step=".5" id="comparison-slider-1" style="color: #fff">
+							 </div>
+							 <div style="font-size: .7em">
+								 <label for="comparison-slider-2">Value of $b$</label>
+								 <input oninput="myComparison()" type="range" min="0" max="6" value="2" step=".5" id="comparison-slider-2" style="color: #fff">
+							 </div>
+							 <div style="font-size: .7em">
+								 <label for="comparison-check">Allow communication:</label>
+								 <input onchange="myComparison()" type="checkbox" value="1" id="comparison-check">
+							 </div>
+						 </div>
 					 </div>
  				 </section>
 
-				<section>
-					<section>
-  					 <h3>Conclusion</h3>
-  					 <div id="slide">
- 					 </div>
-  				 </section>
-					 <section>
-	 					 <h3>Communication</h3>
-	 					 <div id="slide">
-						 </div>
-	 				 </section>
-				</section>
 
+			<section>
+				<h3>Conclusion</h3>
+				<div id="slide">
+				</div>
+			</section>
+
+
+
+			 <section>
+					 <h3>Conclusion</h3>
+					 <div id="slide">
+						 <span class="fragment fade-in">
+							 <p> More in the paper: </p>
+							 <ul>
+								 <li>
+									 Compare with take-it-or-leave-it offer.
+								 </li>
+								 <li>
+									 Replace the initial period of binding voting with a straw poll.
+								 </li>
+								 <li>
+									 Remove non-credible beliefs.
+								 </li>
+							 </ul>
+						 </span>
+						 <span class="fragment fade-in">
+							 <p> What next? </p>
+							 <ul>
+								 <li>
+									 More: voters, periods, states, general utilities, etc.
+								 </li>
+								 <li>
+									 Noisy signals: adds an information aggregation aspect.
+								 </li>
+							 </ul>
+						 </span>
+					 </div>
+			 	</section>
+
+
+				<section>
+					<p class="r-fit-text"> Thank you! </p>
+				</section>
 
 <!--
 

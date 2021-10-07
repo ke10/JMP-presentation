@@ -5,8 +5,8 @@ function linspace(a,c,n) {
 
 function mplus()
 {
-  var yl = parseFloat(document.getElementById("slider7").value);
-  var b = parseFloat(document.getElementById("slider8").value);
+  var yl = parseFloat(document.getElementById("comparison-slider-1").value);
+  var b = parseFloat(document.getElementById("comparison-slider-2").value);
   var d = 1;
   var yh = 10;
   var rad = (yh+b)**2-4*d*(yh+b-yl)*yl;
@@ -14,15 +14,14 @@ function mplus()
   var mplus = yl/(yh-pplus+yl);
   var v=mplus*pplus+(1-mplus)*yl;
   var y=yl/yh*pplus+(1-yl/yh)*yl;
-  document.getElementById("print").innerHTML = [mplus,v,y];
 }
 
 
-function myCoalition()
+function myComparison()
 {
-  myPlot = document.getElementById("coalition");
-  var yl = parseFloat(document.getElementById("slider7").value);
-  var b = parseFloat(document.getElementById("slider8").value);
+  myPlot = document.getElementById("comparison");
+  var yl = parseFloat(document.getElementById("comparison-slider-1").value);
+  var b = parseFloat(document.getElementById("comparison-slider-2").value);
   var d = 1;
   var yh = 10;
 
@@ -30,7 +29,7 @@ function myCoalition()
   var xArray = [0,1,yl/yh,0];
   var yArray = [yl,yh,yl,yl];
 
-  var name1 = "The limit set of" + "$V_A$" + "under unanimity";
+  var name1 = "$\\text{The limit set of }V_A\\text{ under unanimity}$";
 
   var trace1 = {
     x:xArray,
@@ -85,7 +84,7 @@ function myCoalition()
   };
 
 
-  var checked = document.getElementById("check1").checked;
+  var checked = document.getElementById("comparison-check").checked;
   var data = (checked==1) ? [trace3,trace2] : [trace1,trace2];
 
 
@@ -109,7 +108,7 @@ function myCoalition()
       fixedrange: true,
     },
     yaxis: {
-      range: [0, yh*2],
+      range: [0, yh*1.2],
       title: "$\\text{Agenda-setter's expected payoff }v$",
       tickvals: [yl,yh],
       ticktext: ["$y^\\ell$","$y^h$"],
@@ -121,7 +120,7 @@ function myCoalition()
     legend: {
       x: 0,
       xanchor: 'left',
-      y: 1,
+      y: 1.4,
       traceorder: "reversed",
     },
     margin: {
