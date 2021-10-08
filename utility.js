@@ -50,7 +50,7 @@ function myUtility()
     legend: {
       x: .5,
       xanchor: 'center',
-      y: 0,
+      y: -.25,
     },
     hovermode: false,
   };

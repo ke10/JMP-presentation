@@ -27,7 +27,7 @@ function mySecond()
     y:yArray,
     mode:"lines",
     line: {color: "00205B"},
-    name: "$u_i(x;\\omega)=-(\\frac12y^\\ell-x)^2$",
+    name: "$u_L(x;\\ell)=-(\\frac12y^\\ell-x)^2$",
     xaxis: "x1",
     yaxis: "y1",
   };
@@ -37,7 +37,7 @@ function mySecond()
     y:zArray,
     mode:"lines",
     line: {color: "00205B", dash: "dashdot"},
-    name: "$u_i(x;\\omega)=-(\\frac12(y^\\ell+b)-x)^2$",
+    name: "$u_R(x;\\ell)=-(\\frac12(y^\\ell+b)-x)^2$",
     xaxis: "x1",
     yaxis: "y1",
   };

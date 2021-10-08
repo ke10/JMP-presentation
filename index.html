@@ -182,7 +182,7 @@
 							 Period utility of voter $i$ from policy $x$ in state $\omega$ is \[u_i(x;\omega)=-\textstyle\left(\frac12 y_i^{\omega}-x\right)^2\]
 						 </p>
 						 <p>
-			 				<div id="utility" style="margin: 0 auto; max-height: 400px; max-width: 600px; font-size: .7em"></div>
+			 				<div id="utility" style="margin: 0 auto; max-height: 300px; max-width: 600px; font-size: .7em"></div>
 			 				<div style="display: grid; grid-template-columns: 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 600px">
 		 						<div style="font-size: .7em">
 		 							<label for="slider">Value of $y^\omega_i$</label>
@@ -337,9 +337,31 @@
 				 <section>
  					 <h3>Majority</h3>
  					 <div id="slide">
-						 *describe cases*
+						 <p class="fragment fade-in"> The agenda-setter does not need to reach out to voter $L$. </p>
+						 <p class="fragment fade-in"> Off-path beliefs do not matter. </p>
+						 <p class="fragment fade-in"> Unique equilibrium path. </p>
 					 </div>
  				 </section>
+
+				 <section>
+ 					 <h3>Majority</h3>
+ 					 <div id="slide">
+						 <div class="fragment fade-in" id="theorem"> <b>Theorem 1.</b> Under the majority rule, there is a unique equilibrum path. There exist $m^\ell\in(0,1)$ and $m^h\in(0,1)$ such that: <br>
+							 <ul style="margin-top: 1em;">
+								 <li class="fragment fade-in">
+									 if $\hat\mu &lt; m^\ell$, the initial proposal is $y^\ell+b$
+								 </li>
+								 <li class="fragment fade-in">
+									 if $\hat\mu > m^h$, the initial proposal is $y^h+b$ and the revised proposal is $y^h+b$
+								 </li>
+								 <li class="fragment fade-in">
+									 if $m^\ell &lt; \hat\mu &lt; m^h$, the initial proposal is $p_R\in(y^\ell+b,y^h+b)$ and the revised proposal is $y^\ell+b$
+								 </li>
+							 </ul>
+					 	 </div>
+					 </div>
+ 				 </section>
+
 
 
 				 <section>
@@ -372,7 +394,7 @@
  					 <div id="slide">
 						 <p class="fragment fade-in"> Revised proposal depends on who voted for the initial proposal. </p>
 						 <p class="fragment fade-in"> Can use off-path beliefs to punish deviations. </p>
-						 <p class="fragment fade-in"> Multiplicty of equilibrium paths. </p>
+						 <p class="fragment fade-in"> Multiplicity of equilibrium paths. </p>
 						 <div class="fragment fade-in" id="theorem"> <b>Theorem 2.</b> There exist $\underline{v}$ and $\overline{v}$ such that under the unanimity rule, the agenda-setter's equilibrium ex ante expected payoff equals $v$ if and only if $v\in[\underline{v},\overline{v}]$. </div>
 					 </div>
  				 </section>
@@ -409,8 +431,12 @@
 
 
 			<section>
-				<h3>Conclusion</h3>
+				<h3>Communication</h3>
 				<div id="slide">
+					<p class="fragment fade-in"> The approach to communication is model-free. </p>
+					<p class="fragment fade-in"> <b>Coalition-proofness</b> &#8211; a refinement suggested by <br> Bernheim, Peleg, and Whinston (1987). </p>
+					<p class="fragment fade-in"> Equilibrium must be robust to joint deviations that also <br> self-enforcing. </p>
+					<p class="fragment fade-in"> If passes these criteria, an equilibrium survives the ability of voters to freely discuss their strategies. </p>
 				</div>
 			</section>
 
@@ -420,16 +446,16 @@
 					 <h3>Conclusion</h3>
 					 <div id="slide">
 						 <span class="fragment fade-in">
-							 <p> More in the paper: </p>
+							 <p> More in the paper </p>
 							 <ul>
 								 <li>
-									 Compare with take-it-or-leave-it offer.
+									 Compare with take-it-or-leave-it offer
 								 </li>
 								 <li>
-									 Replace the initial period of binding voting with a straw poll.
+									 Replace the initial period of binding voting with a straw poll
 								 </li>
 								 <li>
-									 Remove non-credible beliefs.
+									 Remove non-credible beliefs
 								 </li>
 							 </ul>
 						 </span>
@@ -437,7 +463,7 @@
 							 <p> What next? </p>
 							 <ul>
 								 <li>
-									 More: voters, periods, states, general utilities, etc.
+									 More of everything: <br> voters, periods, states, more general utilities, etc.
 								 </li>
 								 <li>
 									 Noisy signals: adds an information aggregation aspect.
