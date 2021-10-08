@@ -80,7 +80,6 @@
 				</section>
 
 
-				<section>
 					<section>
 						<h3>Motivation</h3>
 						<div id="slide">
@@ -109,34 +108,6 @@
 						</div>
 					</section>
 
-					<section>
-						<h3>Related literature</h3>
-						<div style="font-size: .7em">
-							<ul>
-								<li> Repeated referenda <br>
-									<span style="color: blue">
-										<b>Romer and Rosenthal (1979)</b>, Morton (1988), Rosenthal and Zame (2019), Chen (2020a,b)
-									</span>
-								</li>
-								<li> Bilateral bargaining with asymmetric information <br>
-									<span style="color: blue">
-										<b> Fudenberg, Levine, and Tirole (1985)</b>, Gul, Sonnenschein, and Wilson (1986), Deneckere and Liang (2006), Fuchs and Skrzypacz (2013), Ortner (2017), Daley and Green (2020)
-									</span>
-								</li>
-								<li> Voting on endogeneous agenda <br>
-									<span style="color: blue">
-										Bond and Eraslan (2010)
-									</span>
-								</li>
-								<li> Signaling in voting <br>
-									<span style="color: blue">
-										Piketty (2000), Razin (2003), Meirowitz (2005), Meirowitz and Shotts (2009), McMurray (2017)
-									</span>
-								</li>
-							</ul>
-						</div>
-					</section>
-				</section>
 
 				<section>
 					 <h3> Key features </h3>
@@ -154,6 +125,36 @@
 						 <p class="fragment fade-in"> What is the role of voting rule? </p>
 					 </div>
 				</section>
+
+
+				<section>
+					<h3>Related literature</h3>
+					<div style="font-size: .7em">
+						<ul>
+							<li> Repeated referenda <br>
+								<span style="color: blue">
+									<b>Romer and Rosenthal (1979)</b>, Morton (1988), Rosenthal and Zame (2019), Chen (2020a,b)
+								</span>
+							</li>
+							<li> Bilateral bargaining with asymmetric information <br>
+								<span style="color: blue">
+									<b> Fudenberg, Levine, and Tirole (1985)</b>, Gul, Sonnenschein, and Wilson (1986), Deneckere and Liang (2006), Fuchs and Skrzypacz (2013), Ortner (2017), Daley and Green (2020)
+								</span>
+							</li>
+							<li> Voting on endogeneous agenda <br>
+								<span style="color: blue">
+									Bond and Eraslan (2010)
+								</span>
+							</li>
+							<li> Signaling in voting <br>
+								<span style="color: blue">
+									Piketty (2000), Razin (2003), Meirowitz (2005), Meirowitz and Shotts (2009), McMurray (2017)
+								</span>
+							</li>
+						</ul>
+					</div>
+				</section>
+
 
 				<section>
 					<h3>Environment</h3>
@@ -215,6 +216,7 @@
 					 <div id="slide">
 						 <p> The agenda-setter is <b>uninformed</b> </p>
 						 <p> Voters <b>privately</b> observe the state $\omega\in\{\ell,h\}$ </p>
+						 <p> <br> The prior belief is $\hat\mu$ &#8212; the probability that the state is $h$.</p>
 					 </div>
 				 </section>
 
@@ -312,12 +314,56 @@
 						</p>
 				 </div>
  				 </section>
+				 <section data-auto-animate>
+ 					 <h3>Timing</h3>
+ 					 <div id="slide">
+					 	<ul>
+							<li>
+								two periods
+							</li>
+							<li>
+								the agenda-setter makes proposal $p_1\in\mathbb R_+$
+							</li>
+							<li>
+								if $q\in\{1,2\}$ voters accept $p_1$, policy $p_1$ is implemented in both periods
+							</li>
+							<li>
+								otherwise, status-quo policy $0$ is implemented in period 1 and the agenda-setter makes proposal $p_2\in\mathbb R_+$
+							</li>
+							<li>
+								if $q$ voters accept $p_2$, policy $p_2$ is implemented in period 2
+							</li>
+							<li>
+								future payoffs are discounted at rate $\delta$
+							</li>
+						</ul>
+						</p>
+				 </div>
+ 				 </section>
+
+
+				 <section>
+ 					 <h3>Equilibrium concept</h3>
+ 					 <div id="slide">
+						 <p> <b>Perfect Bayesian equilibrium</b>: assessment $(\sigma,\mathcal M)$ such that
+							 <ul>
+								 <li>
+									 strategies in $\sigma$ are sequentially rational
+								 </li>
+								 <li>
+									 beliefs in $\mathcal M$ are consistent
+								 </li>
+							 </ul>
+						 </p>
+					 </div>
+ 				 </section>
 
 
 				 <section>
  					 <h3>Second period</h3>
  					 <div id="slide">
-						 <p>
+						 <p> Voter $i$ in state $\omega$ accepts $p_2$ iff $p_2\leq y^\omega_i$ </p>
+						 <p style="margin-top: -.5em;">
 							<div id="second" style="margin: 0 auto; max-height: 400px; max-width: 600px; font-size: .7em"></div>
 							<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; justify-items: center; align-items: center; margin: 0 auto; max-width: 600px">
 								<div style="font-size: .7em">
@@ -326,7 +372,7 @@
 								</div>
 								<div style="font-size: .7em">
 									<label for="slider3">Value of $b$</label>
-									<input oninput="mySecond()" type="range" min="0" max="8" value="4" step=".5" id="slider3" style="color: #fff">
+									<input oninput="mySecond()" type="range" min="0" max="8" value="6" step=".5" id="slider3" style="color: #fff">
 								</div>
 							</div>
 						 </p>
@@ -376,7 +422,7 @@
 								</div>
 								<div style="font-size: .7em">
 									<label for="majority-slider-2">Value of $b$</label>
-									<input oninput="myMajority()" type="range" min="0" max="10" value="4" step=".5" id="majority-slider-2" style="color: #fff">
+									<input oninput="myMajority()" type="range" min="0" max="10" value="2" step=".5" id="majority-slider-2" style="color: #fff">
 								</div>
 								<div style="font-size: .7em">
 									<label for="majority-slider-3">Value of $\delta$</label>
@@ -436,7 +482,6 @@
 					<p class="fragment fade-in"> The approach to communication is model-free. </p>
 					<p class="fragment fade-in"> <b>Coalition-proofness</b> &#8211; a refinement suggested by <br> Bernheim, Peleg, and Whinston (1987). </p>
 					<p class="fragment fade-in"> Equilibrium must be robust to joint deviations that also <br> self-enforcing. </p>
-					<p class="fragment fade-in"> If passes these criteria, an equilibrium survives the ability of voters to freely discuss their strategies. </p>
 				</div>
 			</section>
 
